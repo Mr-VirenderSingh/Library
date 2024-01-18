@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav-bar">
+          <h1 id="heading">Library</h1>
+        </div>
+      </nav>
+      <main>
+        <div class="book_shelf">
+          <button type="button" class="new_book_btn">New Book</button>
+          <form action="#">
+            <div class="add_new_book" style="display: none">
+              <label for="author">Author</label>
+              <input type="text" id="author" />
+              <label for="title">Title</label>
+              <input type="text" id="title" />
+              <label for="total_pages">Total Pages</label>
+              <input type="text" id="total_pages" />
+              <label for="read_status">Read yet :</label>
+              <span><input type="checkbox" id="read_status" /></span>
+              <button type="submit" class="book_submit_btn">Submit</button>
+            </div>
+          </form>
+          <div id="library"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

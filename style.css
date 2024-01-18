@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Acme", sans-serif;
+}
+/* ----------------Nav Bar-------------- */
+.nav-bar {
+  width: 100%;
+  height: 12vh;
+  border-bottom: 2px solid black;
+  background-color: #80727b;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.nav-bar > #heading {
+  font-size: 28px;
+  letter-spacing: 4px;
+}
+
+/* ----------------Book Section-------------- */
+.book_shelf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.new_book_btn {
+  padding: 12px 14px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #232ed1;
+}
+
+.add_new_book{
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 14px;
+    background-color: #999AC6;
+
+}
+
+.add_new_book label {
+    display: block;
+    padding: 4px;
+    margin: 10px 0 4px 0;
+    width: 80%;
+    /* border: 1px solid red; */
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.add_new_book input{
+    padding: 6px;
+    font-size: 20px;
+    font-weight: 500;
+    /* margin: 4px; */
+    width: 80%;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.book_submit_btn{
+    width: 80%;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #232ed1;
+    font-size: 18px;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.new_book_btn:hover, .book_submit_btn:hover{
+    background-color: #5d64c7;
+}
+
+
+.card-body{
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+}
+
+#library{
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+} 
