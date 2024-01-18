@@ -1,15 +1,18 @@
+let show_form = document.querySelector(".add_new_book");
 const myLibrary = [];
 
-function book(author, title, total_pages, read_yet) {
-  this.author = author;
-  this.title = title;
-  this.total_pages = total_pages;
-  this.read_yet = read_yet;
-}
+class Book {
+  constructor(author, title, total_pages, read_yet) {
+    this.author = author;
+    this.title = title;
+    this.total_pages = total_pages;
+    this.read_yet = read_yet;
+  }
 
-book.prototype.toggleRead = function () {
-  this.read_yet = !this.read_yet;
-};
+  toggleRead() {
+    this.read_yet = !this.read_yet;
+  }
+}
 
 function toggleRead(index) {
   myLibrary[index].toggleRead();
@@ -22,7 +25,7 @@ function addBookToLibrary() {
   let total_pages = document.querySelector("#total_pages").value;
   let read_status = document.getElementById("read_status").checked;
 
-  const add_book = new book(author, title, total_pages, read_status);
+  const add_book = new Book(author, title, total_pages, read_status);
   myLibrary.push(add_book);
   render();
 }
@@ -45,29 +48,25 @@ function render() {
     <button class="remove_btn" onclick='removeBook(${i})'>Remove</button>
     <button class="toggle" onclick="toggleRead(${i})">Toggle</button>
     `;
-    console.log(book);
     library.appendChild(bookEl);
-    console.log(bookEl);
+    show_form.style.display = "none";
   }
 }
 
 let hide_unhide = 0;
 
 document.querySelector(".new_book_btn").addEventListener("click", () => {
-  let show_form = document.querySelector(".add_new_book");
-  console.log(hide_unhide);
   switch (hide_unhide) {
     case 0:
       show_form.style.display = "flex";
       hide_unhide++;
-        break;
-    
-      case 1:
+      break;
+
+    case 1:
       show_form.style.display = "none";
       hide_unhide--;
-        break;
-    }
-
+      break;
+  }
 });
 
 document.querySelector("form").addEventListener("submit", (event) => {
